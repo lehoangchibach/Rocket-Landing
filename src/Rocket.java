@@ -4,19 +4,14 @@ public class Rocket {
     private double angle;
     private double velx;
     private double vely;
-    private double fuel = 10;
+    private double fuel = 1;
     private Extent extent;
-    private final String rocket = new String("/home/bach/Documents/Code/Java/Rocket Landing/LandingRocket/rocket_red.png");
+    private final String rocket = new String(System.getProperty("user.dir") + "/LandingRocket/rocket_red.png");
 
-    public static void main(String[] args){
-        StdDraw.enableDoubleBuffering();
-        StdDraw.setCanvasSize(800,600);
-        Rocket rocket = new Rocket();
-        StdDraw.picture(rocket.getX(), rocket.getY(), rocket.getRocket());
-    }
+
     Rocket(){
-        this.x = 0;
-        this.y = 0;
+        this.x = 0.13;
+        this.y = 0.11;
         this.angle = Math.PI/2;
     }
 
@@ -28,7 +23,7 @@ public class Rocket {
     public void accelerate(double a){
         velx += a*Math.cos(a);
         vely += a*Math.sin(a);
-        fuel -= 0.2;
+        fuel -= 0.02;
     }
 
     public double getX() {

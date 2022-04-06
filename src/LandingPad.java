@@ -1,7 +1,8 @@
 public class LandingPad {
     private double x;
     private double y;
-//    private doubmax_x, min_y;
+    private final String landingPad = new String(System.getProperty("user.dir") + "/LandingRocket/launchpad.png");
+
 
     public LandingPad(double x, double y){
         this.x = x;
@@ -16,13 +17,15 @@ public class LandingPad {
         return y;
     }
 
-
-    public boolean checkLanding(Rocket rocket){
-        //To do
-        return false;
+    public String getLandingPad() {
+        return landingPad;
     }
 
-    public void floating(){
+    //    public boolean checkLanding(Rocket rocket){
+//        //To do
+//        return false;
+//    }
 
-    }
+//    public void floating(){
+//    }
 }
