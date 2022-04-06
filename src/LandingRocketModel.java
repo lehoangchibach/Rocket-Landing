@@ -1,2 +1,12 @@
-package PACKAGE_NAME;public class LandingRocketModel {
+public class LandingRocketModel {
+
+    private Rocket rocket = new Rocket();
+    private LandingPad landingPad;
+
+    LandingRocketModel(){
+        rocket = new Rocket();
+        landingPad = new LandingPad(2,2);
+
+    }
+
 }
